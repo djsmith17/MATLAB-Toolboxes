@@ -39,8 +39,7 @@ function [bar_xtick,hb,he]=errorbar_groups(bar_input,errorbar_input,varargin)
 %
 % 'bar_colors': N-by-3 matrix determing the RGB values for bar colors. You
 % must provide at least as many colors as there are groups in your plot.
-% Default value: the function DISTINGUISHABLE_COLORS is used (cf.
-% References).
+% Default value: MATLAB's LINES colormap is used.
 %
 % 'errorbar_colors': N-by-3 matrix determining the RGB values for error bar
 % colors. You must provide at least as many colors as there are groups in
@@ -98,11 +97,7 @@ function [bar_xtick,hb,he]=errorbar_groups(bar_input,errorbar_input,varargin)
 %       'optional_bar_arguments',{'LineWidth',1.5}, ...
 %       'optional_errorbar_arguments',{'LineStyle','none','Marker','none','LineWidth',1.5});
 %
-% References:
-% This function calls the function DISTINGUISHABLE_COLORS, by Timothy E.
-% Holy. http://www.mathworks.com/matlabcentral/fileexchange/29702
-%
-% See also BAR, ERRORBAR, DISTINGUISHABLE_COLORS.
+% See also BAR, ERRORBAR.
 
 % Author of this function: pierre.megevand@gmail.com
 %
@@ -117,12 +112,14 @@ function [bar_xtick,hb,he]=errorbar_groups(bar_input,errorbar_input,varargin)
 % 2015/01/20 -- Fixed an issue where no error bars were plotted in the case
 % that one side's bound (upper or lower) was set to 0.
 % Modified by Ariel Tankus: 08.04.2015. Fit to Matlab R2014b.
+% 2017/09/20 -- Removed dependency on DISTINGUISHABLE_COLORS; default
+% colors now draw from MATLAB's LINES colormap.
 
 % init defaults for parameters
 [N_grps,N_bars]=size(bar_input);
 bar_width=0.9;
 errorbar_width=0.75;
-bar_colors=distinguishable_colors(N_grps); % get some distinguishable colors for the bars!
+bar_colors=lines(N_grps); % get some default colors for the bars
 errorbar_colors=zeros(N_grps,3); % default errorbar color is black
 optional_bar_arguments={}; % there are no default optional arguments for bar
 optional_errorbar_arguments={'LineStyle','none','Marker','none'}; % default optional arguments for errorbar

@@ -1,6 +1,6 @@
 function test_audapter(varargin)
 %% CONFIG
-exampleDataFN = '../example_data/trial-1-2.mat';
+exampleDataFN = 'audapter_matlab/example_data/trial-1-2.mat';
 
 OST_MULT = 500;
 
@@ -22,17 +22,17 @@ assert(exist('data', 'var') == 1);
 p = data.params;
 
 %% Setting ost and pcf
-ost_fn = '../example_data/ost'; % Online sentence tracking (OST) configuration file
+ost_fn = 'audapter_matlab/example_data/ost'; % Online sentence tracking (OST) configuration file
 
 % Perturbation configuration (PCF) file
 if isequal(pertMode, 'formant')
-    pcf_fn = '../example_data/fmt_pert.pcf';
+    pcf_fn = 'audapter_matlab/example_data/fmt_pert.pcf';
 elseif isequal(pertMode, 'pitch')
-    pcf_fn = '../example_data/pitch_pert.pcf';
+    pcf_fn = 'audapter_matlab/example_data/pitch_pert.pcf';
 elseif isequal(pertMode, 'timeWarp')
-    pcf_fn = '../example_data/timeWarp_pert.pcf';
+    pcf_fn = 'audapter_matlab/example_data/timeWarp_pert.pcf';
 elseif isequal(pertMode, 'debug')    % DEBUG
-    pcf_fn = '../example_data/time_warp_demo.pcf';
+    pcf_fn = 'audapter_matlab/example_data/time_warp_demo.pcf';
 else
     error('Unrecognized perturbation mode: %s', pertMode);
 end
