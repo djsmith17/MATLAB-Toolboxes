@@ -98,8 +98,8 @@ if isequal(mode, 'persistentFormantShift')
 elseif isequal(mode, 'focalFormantShift');
     gender = varargin{1};
      
-    ostFN = '../example_data/focal_fmt_pert.ost';
-    pcfFN = '../example_data/focal_fmt_pert.pcf';
+    ostFN = 'audapter_matlab/example_data/focal_fmt_pert.ost';
+    pcfFN = 'audapter_matlab/example_data/focal_fmt_pert.pcf';
     
     check_file(ostFN);
     check_file(pcfFN);
@@ -128,8 +128,8 @@ elseif isequal(mode, 'focalFormantShift');
     visName = 'Focal formant shift';
     
 elseif isequal(mode, 'persistentPitchShift')
-    ostFN = '../example_data/one_state_tracking.ost';
-    pcfFN = '../example_data/persistent_pitch_pert.pcf';
+    ostFN = 'audapter_matlab/example_data/one_state_tracking.ost';
+    pcfFN = 'audapter_matlab/example_data/persistent_pitch_pert.pcf';
     
     check_file(ostFN);
     check_file(pcfFN);
@@ -152,8 +152,8 @@ elseif isequal(mode, 'persistentPitchShift')
     visName = 'Persistent pitch shift (up 2 semitones)';
     
 elseif isequal(mode, 'twoShortPitchShifts');
-    ostFN = '../example_data/two_blips.ost';
-    pcfFN = '../example_data/two_pitch_shifts.pcf';
+    ostFN = 'audapter_matlab/example_data/two_blips.ost';
+    pcfFN = 'audapter_matlab/example_data/two_pitch_shifts.pcf';
     
     check_file(ostFN);
     check_file(pcfFN);
@@ -177,8 +177,8 @@ elseif isequal(mode, 'twoShortPitchShifts');
     visName = 'Two short pitch shifts';
     
 elseif isequal(mode, 'timeWarp')
-    ostFN = '../example_data/two_blips.ost';
-    pcfFN = '../example_data/time_warp_demo.pcf';
+    ostFN = 'audapter_matlab/example_data/two_blips.ost';
+    pcfFN = 'audapter_matlab/example_data/time_warp_demo.pcf';
     
     check_file(ostFN);
     check_file(pcfFN);
@@ -257,7 +257,7 @@ elseif isequal(mode, 'playTone')
     Audapter('stop');
  
 elseif isequal(mode, 'playWave')
-    inputMatFN = '../example_data/trial-1-2.mat';
+    inputMatFN = 'audapter_matlab/example_data/trial-1-2.mat';
     
     check_file(inputMatFN);    
     load(inputMatFN);
