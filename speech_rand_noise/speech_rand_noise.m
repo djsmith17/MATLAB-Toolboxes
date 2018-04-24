@@ -14,7 +14,7 @@
 [row,col] = size(files); %Determining the number of wave files loaded
 long = []; %preallocating the array to concatenate all the speech files
 for i = 1:col
-    [data,fs] = wavread([path,char(files(i))]);% reading the data file
+    [data,fs] = audioread([path,char(files(i))]);% reading the data file
     data =0.999*data/max(abs(data)); % Normalizing the amplitudes 
     if i ==1
         Fs = fs;
@@ -31,7 +31,7 @@ noise = real(ifft(spec)); % Obatining the real parts of the IFFT
 long = 0.999*long/max(abs(long)); % Normalizing the concatenated speech (For display purposes only)
 noise = 0.999*noise/max(abs(noise)); %Normalizing the speech noise amplitude for wavwrite
 
-wavwrite(noise,fs,'speech_noise_phaserand') % Change the name of the wave file to your liking
+audiowrite(noise,fs,'speech_noise_phaserand') % Change the name of the wave file to your liking
 
 
 %% Plotting the Spectra of the speech corpus and the generated noise
