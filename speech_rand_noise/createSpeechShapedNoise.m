@@ -1,4 +1,4 @@
-function createSpeechShapedNoise(varargin)
+function createSpeechShapedNoise()
 % createSpeechShapedNoise(varargin) creates power spectrum matched noise. 
 % By default, this script will use a speech corpus that is included in the
 % containing folder. An input of 1 to the function will allow you to choose
@@ -18,13 +18,8 @@ function createSpeechShapedNoise(varargin)
 % The resultant is a speech shaped noise with spectrum almost identical to
 % that of the original speech corpus. 
 
-clear
-if isempty(varargin)
-else
-    % Selecting all the wave files to be included in the analysis
-    [files, path] = uigetfile([pwd '\*.wav'], 'Select the speech files', 'MultiSelect', 'on');
-end
-    
+% Selecting all the wave files to be included in the analysis
+[files, path] = uigetfile([pwd '\*.wav'], 'Select the speech files', 'MultiSelect', 'on');   
 
 numFiles = length(files); % Determining the number of wave files loaded
 long = [];                % Preallocating the array to concatenate all the speech files
