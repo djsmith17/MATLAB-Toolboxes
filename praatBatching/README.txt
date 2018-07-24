@@ -1,0 +1,3 @@
+This is a collection of executables, praat batch scripts, and MATLAB functions that I am using to plug Praat into MATLAB. Obviously the most important .exe is praat itself. Having a copy of it here means you never need to redownload it, and its always here. The sendpraat.exe allows sending of commands to praat. 
+
+The batchcalcf0.praat is what I use to calculated pitch from MATLAB. This used to be run from the project repo, but I figure I want to have it all in one place for multiple projects. 
