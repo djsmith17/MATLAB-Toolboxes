@@ -143,10 +143,6 @@ switch(action)
             Audapter(3,'fn2',1500, toPrompt);
         end
         
-        if (isfield(p, 'fb2Gain'));
-            Audapter(3, 'fb2gain', p.fb2Gain, toPrompt);
-        end
-        
         if (isfield(p, 'fb3Gain'));
             Audapter(3, 'fb3gain', p.fb3Gain, toPrompt);
         end
