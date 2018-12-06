@@ -21,10 +21,10 @@ sound_one$ = selected$ ("Sound")
 start = Get start time
 end   = Get end time
 
-To Pitch (ac)... 0.005 lwPitchBnd 15 off 0.03 0.45 0.02 0.35 0.14 upPitchBnd
+To Pitch (ac)... 0.001 lwPitchBnd 15 off 0.03 0.45 0.02 0.35 0.14 upPitchBnd
 
-for i to (end - start)/0.005
-    time = start + i * 0.005
+for i to (end - start)/0.001
+    time = start + i * 0.001
     select Pitch 'sound_one$'
     pitch = Get value at time... time Hertz Linear
     appendInfoLine: fixed$ (time, 3), " ", fixed$ (pitch, 3)
