@@ -191,6 +191,6 @@ function H = makePlot(x,y,errBar,lineProps,transparent,patchSaturation)
 
 
 
-    uistack(H.mainLine,'top') % Bring the main line to the top
+%     uistack(H.mainLine,'top') % Bring the main line to the top
 
 
