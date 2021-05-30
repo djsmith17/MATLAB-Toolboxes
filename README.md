@@ -26,7 +26,7 @@ Very useful script for detecting key strokes on the keyboard
 I honestly don't remember where I use this. I think it was something I was looking into, but decided not to use.
 
 ## praatBatching
-I made these scripts! This package also includes a copy of Praat so you never need to worry about paths on your machine. Maybe I should write some documentation for this...
+These are scripts that I developed along with memebers of the Stepp Lab! This package also includes a copy of Praat so you never need to worry about paths on your machine. Maybe I should write some documentation for this...
 
 ## [shadedErrorBar](https://www.mathworks.com/matlabcentral/fileexchange/26311-raacampbell-shadederrorbar)
 Super slick script for creating a shaded region representing the range of error values in a time-series aggregate
@@ -35,16 +35,16 @@ Super slick script for creating a shaded region representing the range of error 
 Very useful script for sorting lists in natural way. See the link for what I mean.
 
 ## [speech_rand_noise](https://www.mathworks.com/matlabcentral/fileexchange/55701-speech-spectrum-shaped-noise)
-Script I used to generate the Speech-Shaped Noise (SSN) for experiments that required it.
+Script I used to generate the Speech-Shaped Noise (SSN) for experiments that required it. This is not used in the general execution of the scripts and only really needs to be run once.
 
 ## [speechres](https://caisq.github.io/)
-This is Audapter. Configured and portabale for all your speech perturbations needs
+This is Audapter, written and maintained by Shanqing Cai. The version and configuration included in this toolbox is precisely what I used in my thesis experiments.
 
 ## [swtest](https://www.mathworks.com/matlabcentral/fileexchange/13964-shapiro-wilk-and-shapiro-francia-normality-tests)
 Convenient script for running the Shapiro-Wilk Test
 
 ## [tight_subplot](https://www.mathworks.com/matlabcentral/fileexchange/27991-tight_subplot-nh-nw-gap-marg_h-marg_w)
-Very important script for removing the white space between subplots.
+Very important script for removing the white space between subplots. Used in data visualization functions.
 
 ## [tts](https://www.mathworks.com/matlabcentral/fileexchange/18091-text-to-speech)
 Easy to use text-to-speech script
