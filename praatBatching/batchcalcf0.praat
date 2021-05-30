@@ -10,9 +10,12 @@ form Resynthize files to have flat pitch
 	text txtFileLoc
 	positive lwPitchBnd
 	positive upPitchBnd
+	positive tStep
 	positive curTrial
 	positive numTrial
 endform
+
+writeFileLine: "'txtFileLoc$'", ""
 
 #A sound file is opened from the listing:
 Read from file... 'wavFileLoc$'
@@ -21,20 +24,16 @@ sound_one$ = selected$ ("Sound")
 start = Get start time
 end   = Get end time
 
-To Pitch (ac)... 0.005 lwPitchBnd 15 off 0.03 0.45 0.02 0.35 0.14 upPitchBnd
+To Pitch (ac)... 0.001 lwPitchBnd 15 off 0.03 0.45 0.02 0.35 0.14 upPitchBnd
 
-for i to (end - start)/0.005
-    time = start + i * 0.005
-    select Pitch 'sound_one$'
+for i to (end - start)/tStep
+    time = start + i * tStep
     pitch = Get value at time... time Hertz Linear
-    appendInfoLine: fixed$ (time, 3), " ", fixed$ (pitch, 3)
+    appendFileLine: "'txtFileLoc$'", "'time' 'pitch'"
 endfor
-	
-fappendinfo 'txtFileLoc$'
 
 select all
 Remove
-clearinfo
 
 if curTrial = numTrial
 Quit
